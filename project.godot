@@ -1,0 +1,36 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="godot-appodeal-editor-plugin"
+config/icon="res://icon.png"
+
+[autoload]
+
+Appodeal="*res://addons/appodeal/appodeal.gd"
+AppodealNetwork="*res://addons/appodeal/appodeal_network.gd"
+AppodealViewPosition="*res://addons/appodeal/appodeal_view_position.gd"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/appodeal/plugin.cfg" )
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
