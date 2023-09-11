@@ -22,7 +22,7 @@ If you do not plan to build your app for one of the platforms below, you can ski
 2. Copy the contents of `/android` directory from the downloaded archive to the `/android/plugins/` directory of your project.
 3. On the top menu bar navigate to `Project -> Export`, select `Android` platform, tick `Use Custom Build` checkbox, and set `Min SDK` to at least 21.
 4. Activate `Appodeal` under `Plugins` category at `Options` tab.
-5. Open the `/android/build/AndroidManifest.xml` file in a text editor and add the `GAD App Id` as per [instruction](https://wiki.appodeal.com/en/android/get-started#getstarted-ConfigureAdmobMeta-data).
+5. Open the `/android/build/AndroidManifest.xml` file in a text editor and add the `GAD App Id` as per [instruction](https://docs.appodeal.com/android/get-started#configure-admob-meta-data).
 
 ### iOS
 
