@@ -1,6 +1,6 @@
 # Appodeal Plugin for Godot GameEngine
 
-Stable version of Godot Appodeal Plugin is 1.0.0.
+Stable version of Godot Appodeal Plugin is 2.0.0.
 
 *Note, it is not an official Appodeal plugin. There is no one at the moment :)*
 
@@ -8,9 +8,12 @@ Stable version of Godot Appodeal Plugin is 1.0.0.
 
 Follow these steps to import and set up Appodeal Plugin to your Godot project:
 
-1. Download and unzip the archive of a desired version from [Releases](https://github.com/DmitriiFeshchenko/godot-appodeal-editor-plugin/releases) page.
-2. Copy the contents of `/addons` directory to the corresponding folder in your project. (If you don't have one, create it manually in the root of your project)
-3. On the top menu bar navigate to `Project -> Project Settings`, switch to the `Plugins` tab and enable `Appodeal` plugin there.
+1. Download and unzip the archive of a desired version from
+[Releases](https://github.com/DmitriiFeshchenko/godot-appodeal-editor-plugin/releases) page.
+2. Copy the contents of `/addons` directory to the corresponding folder in your project. (If you don't have one,
+create it manually in the root of your project)
+3. On the top menu bar navigate to `Project -> Project Settings`, switch to the `Plugins` tab and
+enable `Appodeal` plugin there.
 
 ## Platform-specific steps
 
@@ -18,16 +21,21 @@ If you do not plan to build your app for one of the platforms below, you can ski
 
 ### Android
 
-1. On the top menu bar navigate to `Project -> Install Android Build Template...` (Skip this step if you have already done this)
-2. Copy the contents of `/android` directory from the downloaded archive to the `/android/plugins/` directory of your project.
-3. On the top menu bar navigate to `Project -> Export`, select `Android` platform, tick `Use Custom Build` checkbox, and set `Min SDK` to at least 21.
+1. On the top menu bar navigate to `Project -> Install Android Build Template...`
+(Skip this step if you have already done this)
+2. Copy the contents of `/android` directory from the downloaded archive to
+the `/android/plugins/` directory of your project.
+3. On the top menu bar navigate to `Project -> Export`, select `Android` platform,
+tick `Use Custom Build` checkbox, and set `Min SDK` to at least 21.
 4. Activate `Appodeal` under `Plugins` category at `Options` tab.
-5. Open the `/android/build/AndroidManifest.xml` file in a text editor and add the `GAD App Id` as per [instruction](https://docs.appodeal.com/android/get-started#configure-admob-meta-data).
+5. Open the `/android/build/AndroidManifest.xml` file in a text editor and add
+the `GAD App Id` as per [instruction](https://docs.appodeal.com/android/get-started#configure-admob-meta-data).
 
 ### iOS
 
 1. Copy the contents of `/ios` directory from downloaded archive to the `/ios/plugins/` directory of your project.
-2. On the top menu bar navigate to `Project -> Export`, select `iOS` platform and activate `Appodeal` under `Plugins` category at `Options` tab.
+2. On the top menu bar navigate to `Project -> Export`, select `iOS` platform and
+activate `Appodeal` under `Plugins` category at `Options` tab.
 3. Under `Plugins Plist` category replace the `GADApplicationIdentifier` with actual id for your project.
 
 # Building Instructions:
@@ -39,7 +47,8 @@ If you do not plan to build your app for one of the platforms below, you can ski
 ## iOS
 
 1. After exporting the Xcode project, open it up and add an empty Dummy.swift file.
-2. Open `General` tab for the target and set `embed & sign` for the following frameworks: DTBiOSSDK, FBAEMKit, FBSDKCoreKit_Bacics, FBSDKCoreKit, OMSDK_Smaato.
+2. Open `General` tab for the target and set `minimum deployments ios` version to at least `12.0`.
+3. Make sure the project is correctly signed in on `Signing & Capabilities` tab.
 
 # API
 
@@ -89,7 +98,6 @@ Appodeal.can_show_for_placement(ad_type:int, placement_name:String)
 Appodeal.get_reward_amount(placement_name:String)
 Appodeal.get_reward_currency(placement_name:String)
 Appodeal.mute_videos_if_calls_muted(is_muted:bool)
-Appodeal.disable_web_view_cache_clear()
 Appodeal.start_test_activity()
 Appodeal.set_child_directed_treatment(value:bool)
 Appodeal.destroy(ad_types:int)
@@ -182,7 +190,7 @@ rewarded_video_show_failed()
 rewarded_video_clicked()
 rewarded_video_finished(amount, name)
 rewarded_video_closed(finished)
-rewarded_video_expired()§˙
+rewarded_video_expired()˙
 ```
 
 Check out the demo project (link below) to get familiar with correct usage of Appodeal SDK API.
