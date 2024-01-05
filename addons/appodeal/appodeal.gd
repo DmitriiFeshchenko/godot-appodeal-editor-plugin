@@ -48,7 +48,7 @@ enum AppStorePurchaseType {
 	NonRenewingSubscription,
 }
 
-const _PLUGIN_VERSION: String = "1.0.0"
+const _PLUGIN_VERSION: String = "2.0.0"
 const _PLUGIN_NAME: String = "Appodeal"
 
 var _instance: Object
@@ -282,11 +282,6 @@ func mute_videos_if_calls_muted(is_muted:bool) -> void:
 	if !_is_valid_env():
 		return
 	_instance.muteVideosIfCallsMuted(is_muted)
-
-func disable_web_view_cache_clear() -> void:
-	if !_is_valid_env():
-		return
-	_instance.disableWebViewCacheClear()
 
 func start_test_activity() -> void:
 	if !_is_valid_env():
