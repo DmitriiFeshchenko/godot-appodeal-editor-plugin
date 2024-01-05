@@ -190,7 +190,7 @@ rewarded_video_show_failed()
 rewarded_video_clicked()
 rewarded_video_finished(amount, name)
 rewarded_video_closed(finished)
-rewarded_video_expired()˙
+rewarded_video_expired()
 ```
 
 Check out the demo project (link below) to get familiar with correct usage of Appodeal SDK API.
