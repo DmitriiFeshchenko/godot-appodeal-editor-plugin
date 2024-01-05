@@ -1,4 +1,5 @@
 .DS_Store
+.idea/
 
 # Godot-specific ignores
 .import/
